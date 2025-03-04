@@ -77,7 +77,7 @@ jobs:
           path: matomo
           ref: ${{ inputs.ref || github.ref }}
       - name: running tests
-        uses: matomo-org/github-action-tests@main
+        uses: matomo-org/github-action-tests@nginxlog
         with:
           test-type: ${{ matrix.type }}
           mysql-driver: ${{ matrix.adapter }}
@@ -99,7 +99,7 @@ jobs:
           path: matomo
           ref: ${{ inputs.ref || github.ref }}
       - name: running tests
-        uses: matomo-org/github-action-tests@main
+        uses: matomo-org/github-action-tests@nginxlog
         with:
           test-type: 'JS'
           php-version: '7.2'
@@ -116,7 +116,7 @@ jobs:
           path: matomo
           ref: ${{ inputs.ref || github.ref }}
       - name: running tests
-        uses: matomo-org/github-action-tests@main
+        uses: matomo-org/github-action-tests@nginxlog
         with:
           test-type: 'Client'
           node-version: '16'
@@ -136,7 +136,7 @@ jobs:
           path: matomo
           ref: ${{ inputs.ref || github.ref }}
       - name: running tests
-        uses: matomo-org/github-action-tests@main
+        uses: matomo-org/github-action-tests@nginxlog
         with:
           ui-test-options: '--num-test-groups=4 --test-group=${{ matrix.parts }}'
           test-type: 'UI'
